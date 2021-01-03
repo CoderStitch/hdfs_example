@@ -19,7 +19,7 @@ public class HdfsClient {
         // 配置在集群上运行
         FileSystem fs = FileSystem.get(new URI("hdfs://150.158.174.69:9000"), configuration, "ubuntu");
         // 2 创建目录
-        fs.mkdirs(new Path("/1108/daxian/banzhang"));
+        fs.mkdirs(new Path("/1107/daxian/banzhang"));
         // 3 关闭资源
         fs.close();
     }
@@ -60,7 +60,7 @@ public class HdfsClient {
         FileSystem fs = FileSystem.get(new
                 URI("hdfs://150.158.174.69:9000"), configuration, "ubuntu");
         // 2 执行删除
-        fs.delete(new Path("/1108/"), true);
+        fs.delete(new Path("/ubuntu/output/wordcount/out"), true);
         // 3 关闭资源
         fs.close();
     }
